@@ -1,48 +1,138 @@
-# 🚍 Smart College Bus ETA & Tracking System
+# 🚌 SMVITM Bus Tracker
 
-An engineering project built for **Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM)**, Bantakal.
+An interactive bus route management application developed to help students and staff quickly access transportation information for **Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM)**.
 
-This system provides real-time stop-to-stop ETA prediction for college buses using scheduled timetable matrices, dynamic route stop filtering, crossed-stop validation, and simulated GPS geolocation lookup.
-
----
-
-## 💡 Project Naming & Interview Defense Guide
-
-### ❓ Question from External Examiner / Interviewer:
-> *"Is this really an AI model, or is it an algorithmic timetable/spatial tracking system?"*
-
-### 🗣️ Perfect Technical Answer:
-
-> *"You are absolutely right, sir/ma'am. In this implementation phase, we built a **Smart Algorithmic Baseline System** using deterministic schedule time deltas and a **spatial k-Nearest Neighbor (Haversine) algorithm** for GPS geolocation mapping.*
->
-> *We chose this approach over a Machine Learning model because our current dataset consists of fixed timetable schedules rather than historical GPS delay logs. For fixed college bus timetables, deterministic calculations are **100% accurate and mathematically exact**.*
->
-> *In a future deployment with live GPS hardware, an ML model (like Random Forest or XGBoost) can be trained on historical traffic congestion and weather features to predict real-time delay offsets relative to our baseline."*
+The application processes bus route data, provides route lookup functionality, and presents information through an intuitive dashboard to improve the accessibility of campus transportation details.
 
 ---
 
-## 📌 Recommended Project Titles
+## Overview
 
-1. **Smart College Bus ETA & Tracking System** *(Recommended - 100% technically accurate & safe from tricky examiner questions)*
-2. **Intelligent Timetable & Geolocation College Bus Tracker**
-3. **AI-Based College Bus Tracking System (Phase 1 Baseline)**
+Managing campus transportation information manually can be inconvenient for students and staff. This project provides a centralized interface for viewing bus routes and related information, making it easier to find transportation details quickly.
 
 ---
 
-## 🔥 Key Features
+## Features
 
-- **Dynamic Route Filtering**: Selecting a bus route automatically updates the available current location and destination stop dropdowns for all 9 SMVITM routes.
-- **Stop-to-Stop Timetable ETA**: Calculates exact arrival time differences and remaining route distance (`26.0 km` for Hiriadka $\rightarrow$ SMVITM).
-- **Crossed-Stop Detection**: Alerts the user with `⚠ Bus has already crossed your stop` if the current bus position is past the student's stop.
-- **Visual Bus Route Tracker**: Displays an interactive horizontal stepper highlighting origin, live position, destination stop, and SMVITM campus.
-- **Simulated GPS Geolocation Module**: Demonstrates real-world hardware integration by converting Latitude/Longitude GPS telemetry into the nearest timetable bus stop using spatial distance calculations.
+* Interactive dashboard
+* Bus route lookup
+* Route information management
+* Excel-based data processing
+* Fast search functionality
+* Simple and user-friendly interface
+* Modular Python codebase
 
 ---
 
-## 🚀 How to Run the Application
+## Technology Stack
+
+| Category        | Technology      |
+| --------------- | --------------- |
+| Language        | Python          |
+| Data Processing | Pandas          |
+| Excel Handling  | OpenPyXL        |
+| Dashboard       | Dash / Plotly   |
+| Data Source     | Microsoft Excel |
+
+---
+
+## Project Structure
+
+```text
+SMVITM_Bus_Tracker/
+│
+├── assets/
+│   └── logo.png
+│
+├── dashboard.py
+├── routes.py
+├── utils.py
+├── process_user_data.py
+├── init_project.py
+├── verify_project.py
+│
+├── requirements.txt
+├── README.md
+└── SMVITM_BUS_DATASETS.xlsx
+```
+
+---
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Poornima18090303/SMVITM_Bus_Tracker.git
+```
+
+### Navigate to the project
+
+```bash
+cd SMVITM_Bus_Tracker
+```
+
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
-python process_user_data.py
-streamlit run dashboard.py
 ```
+
+### Run the application
+
+```bash
+python dashboard.py
+```
+
+---
+
+## Usage
+
+1. Launch the application.
+2. Open the local URL displayed in the terminal.
+3. Browse available bus routes.
+4. Search for a specific route or destination.
+5. View route information through the interactive dashboard.
+
+---
+
+## Screenshots
+
+### Home Dashboard
+
+*A screenshot of the application's main page.*
+
+<!-- Replace the image below after adding your screenshot -->
+
+![Home Dashboard](screenshots/home-dashboard.png)
+
+---
+
+### Route Details
+
+*Displays detailed information about the selected bus route.*
+
+![Route Details](screenshots/route-details.png)
+
+---
+
+### Dataset
+
+The project uses an Excel dataset (`SMVITM_BUS_DATASETS.xlsx`) containing bus routes and transportation information required by the application.
+
+---
+
+## Future Improvements
+
+* Live GPS tracking
+* Real-time bus location updates
+* ETA prediction
+* Mobile application support
+* Admin management portal
+* Database integration
+
+---
+
+## License
+
+This project is intended for educational purposes.
