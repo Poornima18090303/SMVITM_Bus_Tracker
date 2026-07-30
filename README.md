@@ -116,9 +116,25 @@ python dashboard.py
 
 ---
 
+
 ### Dataset
 
-The project uses an Excel dataset (`SMVITM_BUS_DATASETS.xlsx`) containing bus routes and transportation information required by the application.
+The application uses a custom dataset (`SMVITM_BUS_DATASETS.xlsx`) containing transportation information for **Shri Madhwa Vadiraja Institute of Technology and Management (SMVITM)**.
+
+Unlike publicly available datasets, this dataset was **compiled specifically for this project** using bus route information collected from the college. It includes the transportation details required to support the application's route search and dashboard features.
+
+The dataset contains information such as:
+
+* Bus numbers
+* Bus route names
+* Boarding points
+* Intermediate stops
+* Destination locations
+* Route-related transportation details
+
+The dataset is stored in Microsoft Excel format and serves as the primary data source for the application. During execution, the application reads and processes this data to provide users with accurate and organized bus route information.
+
+> **Note:** The dataset represents the bus transportation network of SMVITM at the time of data collection. Any future changes to bus routes or schedules may require corresponding updates to the dataset.
 
 ---
 
